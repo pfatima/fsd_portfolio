@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'fatima_portfolio/styles.css' %}" rel ="stylesheet">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Include jQuery and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    <title>portfolio</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/128/3476/3476457.png">
+</head>
+<body style="background-color: #B3A59A;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'fatima_portfolio:index' %}">Fatima Anees Mulla</a>
+        </div>
+        <div class ="container-fluid nav justify-content-end">
+            <ul class = "m-3 nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'fatima_portfolio:index' %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'fatima_portfolio:about' %}">About</a>
+                  </li>        
+            </ul>
+      </nav>
+    
+<div style="padding-left: 20px;" >
+    <h1>About Me</h1>
+        <p>
+            Hello! I'm Fatima, a sophomore in AIML Engineering. Passionate about artificial intelligence and machine learning, I am constantly exploring new ways to apply these technologies to real-world problems.
+        </p>
+        <p>
+            Currently pursuing my undergraduate degree, I have a strong foundation in algorithms and data structures. I am enthusiastic about leveraging AI to make a positive impact on society.
+        </p>
+    <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, C, Java</li>
+            <li>Machine Learning Libraries: Numpy, Pandas, Scikit-Learn</li>
+            <li>Web Development: HTML, CSS, JavaScript</li>
+        </ul>
+    
+    <div class="d-flex justify-content-center">
+        <h2>RESUME</h2>
+        <a href="{% url 'fatima_portfolio:resume' %}"><img src ="https://cdn-icons-png.flaticon.com/512/1250/1250696.png" width = 40px></a>
+    </div>
+    </div>
+    
+</body>
+</html>
